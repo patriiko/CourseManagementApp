@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="660.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.course.ostrunic.controller.ChangesScreenController">
+    <fx:include source="adminMenuBar.fxml" />
+   <GridPane layoutY="24.0" prefHeight="660.0" prefWidth="1200.0">
+     <columnConstraints>
+       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+     </columnConstraints>
+     <rowConstraints>
+       <RowConstraints maxHeight="120.33334350585938" minHeight="10.0" prefHeight="80.6666768391927" vgrow="SOMETIMES" />
+       <RowConstraints maxHeight="378.6666666666667" minHeight="10.0" prefHeight="378.6666666666667" vgrow="SOMETIMES" />
+       <RowConstraints maxHeight="160.00001525878906" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+     </rowConstraints>
+      <children>
+         <Label text="Changes" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+            <font>
+               <Font name="System Bold" size="30.0" />
+            </font>
+         </Label>
+         <TableView fx:id="changesTableView" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.rowSpan="2">
+           <columns>
+             <TableColumn fx:id="objectColumn" prefWidth="100.0" text="Object" />
+             <TableColumn fx:id="oldValueColumn" prefWidth="390.0" text="Old value" />
+               <TableColumn fx:id="newValueColumn" prefWidth="390.0" text="New value" />
+               <TableColumn fx:id="dateTimeColumn" prefWidth="185.0" text="Date and time" />
+               <TableColumn fx:id="userTypeColumn" prefWidth="132.666748046875" text="User Type" />
+           </columns>
+         </TableView>
+      </children>
+   </GridPane>
+</AnchorPane>

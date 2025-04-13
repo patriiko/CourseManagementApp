@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.course.ostrunic.controller.AddNewCourseScreenController">
+    <children>
+        <fx:include source="adminMenuBar.fxml" />
+      <GridPane layoutY="24.0" prefHeight="575.0" prefWidth="800.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="161.33334350585938" minHeight="10.0" prefHeight="161.33334350585938" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="139.33334350585938" minHeight="9.333297729492188" prefHeight="46.66667683919272" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="267.6667022705078" minHeight="10.0" prefHeight="223.33332316080728" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="142.99996948242188" minHeight="10.0" prefHeight="142.99996948242188" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Add new Course" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label text="Name:" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <Label text="Tasks:" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets right="5.0" top="5.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="nameTextField" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" right="30.0" />
+               </GridPane.margin>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#saveNewCourse" prefWidth="100.0" text="Save Course" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <ListView fx:id="taskListView" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+    </children>
+</AnchorPane>
